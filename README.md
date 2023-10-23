@@ -6,7 +6,7 @@ This repository contains the data and the formulations related to the paper:
 
  <code>clei.jl</code> contain the algorith to determine the incentive to demande response called **Ki** for $i\in {1,2,3,4,5}$.
 
- <code>afficheLatex.jl</code> puts the curves in \Latex format.
+ <code>afficheLatex.jl</code> puts the curves in <code>\Latex<code> format.
  
  Run  <code>call.jl</code> 
 
