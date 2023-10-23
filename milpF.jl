@@ -2,7 +2,7 @@
 
 function membre(i::Int,iter::Int,GainA,Fbar::Matrix{Float64},Tli::Number,Need::Matrix{Float64},Fsum::Matrix{Float64},prod::Matrix{Float64},Frest::Matrix{Float64},Pvc::Vector{Float64},Pac::Vector{Float64})
       mod=Model(CPLEX.Optimizer)
-      set_optimizer(mod, optimizer_with_attributes( CPLEX.Optimizer,"CPX_PARAM_TILIM" =>Tli, "CPX_PARAM_WORKMEM"=>600,"CPX_PARAM_WORKDIR"=> "/home/mariam/julia/julia-1.6.2/bin/CPXsol","CPX_PARAM_NODEFILEIND"=>3))
+      set_optimizer(mod, optimizer_with_attributes( CPLEX.Optimizer,"CPX_PARAM_TILIM" =>Tli, "CPX_PARAM_WORKMEM"=>600,"CPX_PARAM_WORKDIR"=> "Set this parameter ","CPX_PARAM_NODEFILEIND"=>3))
       Gain=@variable(mod,Gain[l in 1:u])
       x=@variable(mod,x[j in 1:JB,s in 1:M,l in 1:u]>=0,Bin)
       z=@variable(mod,z[b in 1:B,t in 1:T,l in 1:u]>=0,Bin)
