@@ -8,7 +8,7 @@ This repository contains the data and the formulations related to the paper:
 
  <code>afficheLatex.jl</code> puts the curves in <code>\Latex</code> format.
  
- Please set paramter <code>CPX_PARAM_WORKDIR</code> at line 5 of the file <code>milpF.jk</code>.
+ Please set paramter <code>CPX_PARAM_WORKDIR</code> at line 5 of the file <code>milpF.jl</code>.
  
  Run  <code>call.jl</code> 
 
