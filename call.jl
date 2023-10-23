@@ -124,7 +124,7 @@ end
 
 function callF()
                                                 # typ determine the type of reparatition keys if type==1 SWEEN, 
-        Tli=50.0
+        Tli=50.0				# the maximum amount of time to solve each member's local problem at each iteratio (TimeLimit)
         Nbcle=5                                 # Number of key calculation methods
         Wshare=0.0                           	# Is the threshold of injection beyond which we share the energy. If there is not enough energy there is no need to share.
         for n in [7]
