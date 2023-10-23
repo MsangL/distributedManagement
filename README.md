@@ -2,12 +2,12 @@
 
 This repository contains the data and the formulations related to the paper:
 
- Mariam Sangaré, Eric Bourreau, Michael Poss. A distributed and parallel scheduling method for demand response in energy communities with distributed generation and storage. 2023. [pdf](https://hal.science/hal-04188878)]
+ Mariam Sangaré, Eric Bourreau, Michael Poss. A distributed and parallel scheduling method for demand response in energy communities with distributed generation and storage. 2023. [pdf](https://hal.science/hal-04188878)
 
- "clei.jl" contain the algorith to determine the incentive to demande response called \textbf{Ki} for $i\in$ {1,2,3,4,5}.
+ <code>clei.jl</code> contain the algorith to determine the incentive to demande response called **Ki** for $i\in {1,2,3,4,5}$.
 
- "afficheLatex.jl" puts the curves in \Latex format.
+ <code>afficheLatex.jl</code> puts the curves in \Latex format.
  
- Run "call.jl" 
+ Run  <code>call.jl</code> 
 
  
