@@ -4,8 +4,7 @@
 
 using JuMP,CPLEX
 function callD(typ::Int,Tli::Number,Wshare)
-	include("milpF.jl")
-	include("aff.jl")
+
         include("cle"*string(typ)*".jl")
 
 	open("Coube","w") do io
@@ -104,7 +103,7 @@ function callD(typ::Int,Tli::Number,Wshare)
 
                 if iter==limI-1 
                         Frest[:,:].=Fsum[:,:]-Fins[:,:]						# Total periodic injection minus the the total lical comsumption
-                        affiche(Fsum,Stock,Frest,Need,production,TCons,qP,Fins,typ) # afficher les courbes
+                        #affiche(Fsum,Stock,Frest,Need,production,TCons,qP,Fins,typ) # afficher les courbes
                 end
                 Obj=0
                 TCons[:,:].=0
@@ -123,6 +122,8 @@ function callD(typ::Int,Tli::Number,Wshare)
 end
 
 function callF()
+	include("milpF.jl")
+	#include("afficheLatex.jl")
                                                 # typ determine the type of reparatition keys if type==1 SWEEN, 
         Tli=50.0				# the maximum amount of time to solve each member's local problem at each iteratio (TimeLimit)
         Nbcle=5                                 # Number of key calculation methods
@@ -130,7 +131,6 @@ function callF()
         for n in [7]
                 @info "************************************************ Main : $n member instance *****************************************"
                 include("Data/n"*string(n)*"_t24.txt")
-                #include("Data/a.jl")
                 for typ in 1:Nbcle
                         callD(typ,Tli,Wshare)
                 end
